@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПроверитьСоединение" id="15">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПроверитьСоединение</CommandName>
+				<ExtendedTooltip name="ФормаПроверитьСоединениеРасширеннаяПодсказка" id="30"/>
+			</Button>
+			<Button name="ФормаПерейтиНаСайтРазработчика" id="16">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ПерейтиНаСайтРазработчика</CommandName>
+				<Picture>
+					<xr:Abs>Picture.png</xr:Abs>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаПерейтиНаСайтРазработчикаРасширеннаяПодсказка" id="31"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<RadioButtonField name="ТипКоннектора" id="26">
+			<DataPath>Объект.ТипКоннектора</DataPath>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ComConnector</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Application</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Application тонкий</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">2</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ТипКоннектораКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="ТипКоннектораРасширеннаяПодсказка" id="32"/>
+			<Events>
+				<Event name="OnChange">ТипКоннектораПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<RadioButtonField name="ТипСоединения" id="11">
+			<DataPath>Объект.ТипСоединения</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Файл</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сервер</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Строка Подключения</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">2</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ТипСоединенияКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ТипСоединенияРасширеннаяПодсказка" id="33"/>
+			<Events>
+				<Event name="OnChange">ТипСоединенияПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<InputField name="Путь" id="1">
+			<DataPath>Объект.Путь</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПутьКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПутьРасширеннаяПодсказка" id="34"/>
+		</InputField>
+		<InputField name="Сервер" id="3">
+			<DataPath>Объект.Сервер</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СерверКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="СерверРасширеннаяПодсказка" id="35"/>
+		</InputField>
+		<InputField name="База" id="5">
+			<DataPath>Объект.База</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="БазаКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="БазаРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="Пользователь" id="7">
+			<DataPath>Объект.Пользователь</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="37"/>
+		</InputField>
+		<InputField name="Пароль" id="9">
+			<DataPath>Объект.Пароль</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПарольКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="38"/>
+		</InputField>
+		<InputField name="СтрокаПодключения" id="28">
+			<DataPath>Объект.СтрокаПодключения</DataPath>
+			<ContextMenu name="СтрокаПодключенияКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="СтрокаПодключенияРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<RadioButtonField name="ВариантПодключения" id="13">
+			<DataPath>Объект.ВариантПодключения</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Авто</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>V8.2</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>V8.3</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">2</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>V7.7</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">3</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ВариантПодключенияКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ВариантПодключенияРасширеннаяПодсказка" id="40"/>
+		</RadioButtonField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ТестCOMПодключения</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Объект.База</Field>
+				<Field>Объект.ВариантПодключения</Field>
+				<Field>Объект.Пароль</Field>
+				<Field>Объект.Пользователь</Field>
+				<Field>Объект.Путь</Field>
+				<Field>Объект.Сервер</Field>
+				<Field>Объект.СтрокаПодключения</Field>
+				<Field>Объект.ТипКоннектора</Field>
+				<Field>Объект.ТипСоединения</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПроверитьСоединение" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить соединение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить соединение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьСоединение</Action>
+		</Command>
+		<Command name="ПерейтиНаСайтРазработчика" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти на сайт разработчика</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти на сайт разработчика</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПерейтиНаСайтРазработчика</Action>
+		</Command>
+	</Commands>
+</Form>
