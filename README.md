@@ -175,3 +175,6 @@ python make.py
 ## 📄 Лицензия
 
 MIT
+
+[**Эти скрипты использованы в статье**](https://infostart.ru/1c/articles/2634130).
+![alt text](https://infostart.ru/bitrix/templates/sandbox_empty/assets/tpl/abo/img/logo.svg)
